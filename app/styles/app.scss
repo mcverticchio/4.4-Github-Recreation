@@ -1,0 +1,283 @@
+
+// Bootstrap Variables
+$icon-font-path: '../../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+
+// Import Bootstrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+
+$backgroundgray: #F5F5F5;
+$gray: #666666;
+$blue: #4078C0;
+$topgradient: #FBFBFB;
+$bottomgradient: #EEEEEE;
+$border: #D5D5D5;
+$grey: #727272;
+$greentopgradient: #89DC6C;
+$greenbottomgradient: #61B145;
+$greenborder: #5CA941;
+$repoblue: #4078C1;
+$repogrey: #767676;
+$purplecircle: #563D7C;
+$redcircle: #E44B23;
+$yellowcircle: #F1E05A;
+$bottomCat: #CCCCCC;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+//
+// li:hover{
+//   text-decoration-color: red;
+// }
+
+.container{
+  width: 1020px;
+}
+
+.fullWidthDiv {
+  background-color:$backgroundgray;
+  height: 50px;
+  vertical-align: middle;
+  padding-top: 8px;
+  width: 1300px;
+  margin-left: -140px;
+  // font-size: 13px;
+  // position: absolute;
+  // width: 100%;
+  // left: 0;
+    img {
+      width:27px;
+      margin-left: 138px;
+    }
+    form {
+      display: inline-block;
+      vertical-align: center;
+      margin-left: 10px;
+
+    }
+    input {
+      width: 360px;
+      height: 29px;
+      border: 1px solid $border;
+      border-radius: 3px;
+      // font-family: inherit;
+      font-size: 13px;
+      display: inline-block;
+    }
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      font-weight: bold;
+      margin-left: 10px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    #avatar {
+      width: 20px;
+      position:absolute;
+      left: 847px;
+      top: 15px;
+    }
+    span:after{
+     content: "";
+     display: block;
+     position: absolute;
+     border: 8px solid transparent;
+     border-top-color: blue;
+     right: 1px;
+    }
+
+}
+
+.leftColumn {
+  margin-top: 20px;
+  // border: 1px solid red;
+  width: 233px;
+  img{
+    width: 100%;
+    height: 235px;
+    border-radius: 5px;
+  }
+  h2{
+    font-size: 26px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  h3{
+    color:$gray;
+    font-size: 20px;
+    margin-top: 0px;
+    font-weight: 200;
+  }
+  h6{
+    color: $repogrey;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+  input {
+      width: 100%;
+      height: 35px;
+      font-weight: bold;
+      background: -webkit-linear-gradient($topgradient, $bottomgradient);
+      background: -o-linear-gradient($topgradient, $bottomgradient);
+      background: linear-gradient($topgradient, $bottomgradient);
+      border: 1px solid $border;
+      border-radius: 3px;
+    }
+  .organizations h3{
+    color: black;
+    font-weight:500;
+    font-size: 18px;
+  }
+}
+
+.rightColumn {
+  margin-top: 40px;
+  padding-left: 95px;
+  .topNav {
+    color: $grey;
+  }
+  form{
+    margin-top: 15px;
+  }
+  #searchRepos {
+    border: 1px solid $border;
+    height:35px;
+    width:382px;
+    border-radius: 3px;
+    vertical-align: top;
+  }
+  #type{
+    width: 98px;
+    height:35px;
+    border-radius: 3px;
+    background: -webkit-linear-gradient($topgradient, $bottomgradient);
+    background: -o-linear-gradient($topgradient, $bottomgradient);
+    background: linear-gradient($topgradient, $bottomgradient);
+    border: 1px solid $border;
+    margin-left: 25px;
+  }
+  #type:after{
+   content: "";
+   display: block;
+   position: absolute;
+   border: 8px solid transparent;
+   border-top-color: blue;
+  }
+  #language {
+    width: 132px;
+    height:35px;
+    background: -webkit-linear-gradient($topgradient, $bottomgradient);
+    background: -o-linear-gradient($topgradient, $bottomgradient);
+    background: linear-gradient($topgradient, $bottomgradient);
+    border-radius: 3px;
+    border: 1px solid $border;
+  }
+  #new {
+    width: 72px;
+    height:35px;
+    background: -webkit-linear-gradient($greentopgradient, $greenbottomgradient);
+    background: -o-linear-gradient($greentopgradient, $greenbottomgradient);
+    background: linear-gradient($greentopgradient, $greenbottomgradient);
+    border: 1px solid $greenborder;
+    border-radius: 3px;
+    margin-left: 4px;
+    color: #FFF;
+  }
+  #bookImage {
+    position: absolute;
+    color: #FFF;
+    right: 65px;
+    bottom: 137px;
+
+  }
+  #repositoryContainer{
+    font-family: inherit;
+    height: 85px;
+  }
+  #repositoryContainer h2{
+    color: $repoblue;
+    font-size: 17px;
+  }
+  #repositoryContainer h4{
+    color: $repogrey;
+    font-size: 15px;
+    font-weight: 400;
+    line-height:2em;
+  }
+  span {
+    margin-right: 30px;
+  }
+  .repohr{
+    margin-bottom:10px;
+  }
+  .number {
+    background: $backgroundgray;
+    padding: 2px 5px;
+    border-radius: 10px;
+    color: $gray;
+    font-weight: bold;
+    font-size: 13px;
+  }
+  i, h6{
+    // text-align: right;
+    color: $grey;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  #circle{
+    height: 15px;
+    width: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position:inline-block;
+  }
+  // i{
+  //   float: right;
+  //   position: relative;
+  //   right: 25px;
+  // }
+  a#secondLink{
+    text-decoration: none;
+  }
+  a:hover{
+    color: $repoblue;
+  }
+  // h6{
+  //   left: 650px;
+  //   top: 10px;
+  // }
+
+}
+
+
+.footer{
+  // margin-top: 1320px;
+  padding-bottom: 40px;
+  font-size: 13px;
+    span{
+      margin-right: 10px;
+      color: $repoblue;
+    }
+    #leftNavBar span:nth-child(1){
+      color: $repogrey;
+    }
+    #leftNavBar span:nth-child(1):before{
+      content:"\00a9" + " ";
+    }
+    #rightNavBar {
+      padding-left: 93px;
+      padding-right: 5px;
+    }
+    #gitCatAvatar {
+      color:$bottomCat;
+      font-size: 30px;
+    }
+}

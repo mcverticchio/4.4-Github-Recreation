@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>4 4 GitHub Recreation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <header class="fullWidthDiv">
+            <img src="images/githubLogo.png" alt="cat">
+            <form>
+              <input type="search" placeholder="Search GitHub">
+            </form>
+            <span>Pull requests</span>
+            <span>Issues</span>
+            <span>Gist</span>
+
+            <div class="imageContainer">
+            <!-- TEMPLATE GOES HERE -->
+            <div>
+          </header>
+        </div>
+      </div>
+
+
+
+      <div class="row">
+
+        <div class="col-md-2">
+          <div class="leftColumn">
+
+              <div class="imageContainer">
+              <!-- TEMPLATE GOES HERE -->
+              </div>
+
+              <script id="individualImage" type ="text/x-handlebars-template">
+                <div>
+                  <img id="avatar" src="{{avatar_url}}" alt="Avatar">
+                </div>
+              </script>
+
+              <div class="nameContainer">
+              <!--TEMPLATE GOES HERE -->
+              </div>
+
+              <script class="nameTemplate" type="text/x-handlebars-template">
+                <h2>{{name}}</h2>
+              </script>
+
+
+            <h3>mcverticchio</h3>
+
+            <div class="bioContainer">
+            <!--TEMPLATE GOES HERE -->
+            </div>
+
+            <script class="bioTemplate" type="text/x-handlebars-template">
+              <h6>{{bio}}</h6>
+            </script>
+
+            <!-- <h6>Add a bio</h6> -->
+            <form>
+              <input class="editProfileButton"type="button" name="text" value="Edit profile">
+            </form>
+
+            <hr>
+
+            <div class="emailContainer">
+            <!--TEMPLATE GOES HERE -->
+            </div>
+
+            <script class="emailTemplate" type="text/x-handlebars-template">
+              <a href="#">{{email}}</a>
+            </script>
+
+            <div class="contact">
+              <i></i>
+              <!-- <a href="mcverticchio@gmail.com">mcverticchio@gmail.com</a> -->
+              <i></i>
+              <span>Joined on Aug 4, 2016</span>
+            </div>
+
+            <hr>
+
+            <h3>Organizations</h3>
+
+            <div id="orgContainer">
+               <!--TEMPLATE GOES HERE -->
+            </div>
+
+
+              <script id="orgTemplate" type="text/x-handlebars-template">
+                <a href="{{events_url}}"><img src="{{avatar_url}}" alt=""></a>
+                <h2>Hey there</h2>
+              </script>
+
+
+          </div>
+        </div>
+
+
+        <div class="col-md-10">
+          <div class="rightColumn">
+            <div class="topNav">
+              <span>Overview</span>
+              <span>Repositories <span class="number">22</span></span>
+              <span>Stars <span class="number">1</span></span>
+              <span>Followers <span class="number">0</span></span>
+              <span>Following <span class="number">1</span></span>
+            </div>
+
+            <hr>
+
+            <form>
+              <input id="searchRepos" type="search" name="name" placeholder=" Search repositories...">
+              <input id="type" type="button" name="name" value="Type: All">
+              <input id="language" type="button" name="name" value="Language: All">
+              <input id="new" type="button" name="name" value="  New"><i id="bookImage" class="fa fa-book" aria-hidden="true"></i>
+            </form>
+
+            <hr>
+
+            <div id="repositoryContainer">
+              <!--HANDLEBARS TEMPLATE GOES HERE -->
+            </div>
+
+            <script id="repoTemplate" type ="text/x-handlebars-template">
+              <div class="repoContainer">
+                <a href="{{html_url}}"><h2>{{name}}</h2></a>
+                <h4>{{description}}</h4>
+                <div id="circle"></div>
+                <h5 id="proglanguage">{{language}}</h5>
+                <span>
+                  <a id="secondLink" href="">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <h6>{{stargazers_count}}</h6>
+                  </a>
+                </span>
+                <hr class="repohr">
+              </div>
+            </script>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+    <div class="footer">
+      <div class="row">
+        <hr>
+        <div id="leftNavBar" class="col-md-6">
+          <span>2016 GitHub, Inc.</span>
+          <span>Terms</span>
+          <span>Privacy</span>
+          <span>Security</span>
+          <span>Status</span>
+          <span>Help</span>
+        </div>
+
+        <div class="col-md-1">
+          <i id="gitCatAvatar" class="fa fa-github" aria-hidden="true"></i>
+        </div>
+
+        <div id="rightNavBar" class="col-md-5">
+          <span>Contact GitHub</span>
+          <span>API</span>
+          <span>Training</span>
+          <span>Shop</span>
+          <span>Blog</span>
+          <span>About</span>
+        </div>
+      </div>
+    </div>
+
+
+      </div>
+    <script src="js/bundle.js"></script>
+  </body>
+</html>
