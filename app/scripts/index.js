@@ -103,7 +103,7 @@ function displayRepos(repos){
   })
 }
 
-// HOW TO CHANGE CIRCLE COLOR BASED ON LANGUAGE VALUE? 
+// HOW TO CHANGE CIRCLE COLOR BASED ON LANGUAGE VALUE?
 // function changeCircleColor (circle){
 //   var circle =document.getElementById("circle");
 //   var language =document.getElementById("language");
