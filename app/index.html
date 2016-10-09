@@ -99,7 +99,7 @@
 
               <script class="orgTemplate" type="text/x-handlebars-template">
 
-                <img id="avatarImg" src="{{avatar_url}}" alt="">
+                <a href="https://github.com/tiy-greenville-front-end-fall-2016"><img id="avatarImg" src="{{avatar_url}}" alt=""></a>
 
               </script>
 
@@ -125,8 +125,10 @@
           <div class="col-md-12">
             <form>
               <input id="searchRepos" type="search" name="name" placeholder=" Search repositories...">
-              <input id="type" type="button" name="name" value="Type: All">
-              <input id="language" type="button" name="name" value="Language: All">
+              <button id="type">Type: All <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+              <!-- <input id="type" type="button" name="name" value="Type: All <i class="fa fa-caret-down" aria-hidden="true"></i>"> -->
+              <button id="language">Language: All <i class="fa fa-caret-down" aria-hidden="true"></i></button>
+              <!-- <input id="language" type="button" name="name" value="Language: All <i class="fa fa-caret-down" aria-hidden="true"></i>"> -->
               <input id="new" type="button" name="name" value="  New"><i id="bookImage" class="fa fa-book" aria-hidden="true"></i>
             </form>
           </div>
@@ -148,7 +150,7 @@
 
 
                   <div class="col-md-6 middleSection">
-                    <div id="circle"></div>
+                    <div id="circle" class="myCircle-{{language}}"></div>
                     <h5 id="progLanguage">{{language}}</h5>
                   </div>
 
