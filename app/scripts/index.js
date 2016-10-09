@@ -63,23 +63,24 @@ function email(data){
   // org(data);
 }
 
-  $.ajax('https://api.github.com/users/mcverticchio/orgs').then(function(data){
-    org(data);
-    console.log(data);
-  });
-
-
-function org(data){
-//   // console.log(data);
-  var source = $('.orgTemplate').html();          //grabs all the html within my "stamp"
-  var template = Handlebars.compile(source);
-
-  var returnHTML = $(template(data));
-
-  $('.orgContainer').append(returnHTML);
-//   //   email(data);
+$.ajax('https://api.github.com/users/mcverticchio/orgs').then(go)
+function go(data){
+  console.log(data);
+  var orgs = data;
+  displayOrgs(orgs);
 }
 
+function displayOrgs(orgs){
+  var source=$('.orgTemplate').html();
+  var template = Handlebars.compile(source);
+
+  orgs.forEach(function(org){
+
+    var returnHTML = $(template(org));
+    $('.orgContainer').append(returnHTML);
+
+  })
+}
 
 
 

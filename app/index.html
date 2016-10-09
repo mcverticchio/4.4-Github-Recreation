@@ -24,8 +24,7 @@
             <span>Gist</span>
 
             <div id="plus"><i class="fa fa-plus" aria-hidden="true"></i></div>
-
-            <div id=""class="imageContainer">
+            <div class="imageContainer">
             <!-- TEMPLATE GOES HERE -->
             <div>
           </header>
@@ -91,18 +90,17 @@
 
             <hr>
 
-            <h3>Organizations</h3>
+            <h3 class="orgTitle">Organizations</h3>
 
-            <div class="orgContainer">
+              <div class="orgContainer">
                <!--TEMPLATE GOES HERE -->
-            </div>
+              </div>
 
 
               <script class="orgTemplate" type="text/x-handlebars-template">
-                <!-- <a href="{{url}}"> -->
-                <img src="{{avatar_url}}" alt="">
-              <!-- </a> -->
-                <!-- <h2>{{id}}</h2> -->
+
+                <img id="avatarImg" src="{{avatar_url}}" alt="">
+
               </script>
 
 
@@ -121,7 +119,7 @@
               <span>Followers <span class="number">0</span></span>
               <span>Following <span class="number">1</span></span>
             </div>
-            <hr>
+            <hr id="hrBeforeForms">
           </div>
 
           <div class="col-md-12">
@@ -131,7 +129,6 @@
               <input id="language" type="button" name="name" value="Language: All">
               <input id="new" type="button" name="name" value="  New"><i id="bookImage" class="fa fa-book" aria-hidden="true"></i>
             </form>
-            <hr>
           </div>
 
 
@@ -140,31 +137,32 @@
           </div>
 
           <script id="repoTemplate" type ="text/x-handlebars-template">
-              <div class="col-md-12">
+              <div class="col-md-12 reps">
                 <div class="repoContainer">
 
-              <!-- <div class="topOfRepoContainer"> -->
-                <div class="col-md-5">
-                  <a href="{{html_url}}"><h2>{{name}}</h2></a>
-                  <h4>{{description}}</h4>
-                </div>
+                  <div class="col-md-5 repoNames">
+                    <a href="{{html_url}}"><h2>{{name}}</h2></a>
+                    <h4>{{description}}</h4>
+                    <!-- <h4>{{forks_url}}</h4> -->
+                  </div>
 
-                <div class="col-md-4">
-                  <div id="circle"></div>
-                  <h5 id="progLanguage">{{language}}</h5>
-                </div>
 
-                <div class="col-md-3">
-                  <a id="secondLink" href="">
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <h6>{{stargazers_count}}</h6>
-                  </a>
-                </div>
+                  <div class="col-md-6 middleSection">
+                    <div id="circle"></div>
+                    <h5 id="progLanguage">{{language}}</h5>
+                  </div>
 
-                <hr class="repohr">
+
+                  <div class="col-md-1 rightSection">
+                    <a id="secondLink" href="">
+                      <i class="fa fa-star" aria-hidden="true"></i>
+                      <h6>{{stargazers_count}}</h6>
+                    </a>
+                  </div>
+                </div>
               </div>
-            </div>
           </script>
+
         </div>
         </div>
         <hr>
