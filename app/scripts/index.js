@@ -60,7 +60,7 @@ function email(data){
   var returnHTML = $(template(data));
 
   $('.emailContainer').append(returnHTML);
-
+  // org(data);
 }
 
   $.ajax('https://api.github.com/users/mcverticchio/orgs').then(function(data){
@@ -71,12 +71,12 @@ function email(data){
 
 function org(data){
 //   // console.log(data);
-  var source = $('#orgTemplate').html();          //grabs all the html within my "stamp"
+  var source = $('.orgTemplate').html();          //grabs all the html within my "stamp"
   var template = Handlebars.compile(source);
 
   var returnHTML = $(template(data));
 
-  $('#orgContainer').append(returnHTML);
+  $('.orgContainer').append(returnHTML);
 //   //   email(data);
 }
 

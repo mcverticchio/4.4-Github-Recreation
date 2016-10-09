@@ -44,7 +44,7 @@ img {
   background-color:$backgroundgray;
   height: 50px;
   vertical-align: middle;
-  padding-top: 8px;
+  padding-top: 10px;
   width: 1300px;
   margin-left: -140px;
   // font-size: 13px;
@@ -59,7 +59,6 @@ img {
       display: inline-block;
       vertical-align: center;
       margin-left: 10px;
-
     }
     input {
       width: 360px;
@@ -78,19 +77,35 @@ img {
       font-size: 13px;
       font-weight: 500;
     }
+    #plus{
+      font-size: 17px;
+      position: absolute;
+      right: 61px;
+      bottom: 12px;
+    }
+    #plus:after{
+      content: "";
+      display: block;
+      position: absolute;
+      border: 4px solid transparent;
+      border-top-color: black;
+      right: -13px;
+      bottom: 3px;
+    }
     #avatar {
       width: 20px;
       position:absolute;
       left: 847px;
       top: 15px;
     }
-    span:after{
+    .imageContainer:after{
      content: "";
      display: block;
      position: absolute;
-     border: 8px solid transparent;
-     border-top-color: blue;
-     right: 1px;
+     border: 4px solid transparent;
+     border-top-color: black;
+     right: -1px;
+     bottom: 15px;
     }
 
 }
@@ -131,21 +146,44 @@ img {
       border: 1px solid $border;
       border-radius: 3px;
     }
+    // .input:hover > .overlay{
+    //   width:100%;
+    //   height:100%;
+    //   position:absolute;
+    //   background-color:#000;
+    //   opacity:0.5;
+    //   border-radius:30px;
+    // }
+  .editProfileButton:hover{
+    -webkit-filter: brightness(96%);
+  }
+  .data{
+    font-size: 15px;
+     padding-top: 5px;
+  }
   .organizations h3{
     color: black;
     font-weight:500;
     font-size: 18px;
-  }
+}
 }
 
 .rightColumn {
   margin-top: 40px;
-  padding-left: 95px;
+  padding-left: 70px;
+  width: 834px;
+   span{
+     margin-right:25px;
+   }
+   #overView{
+     margin-left: 20px;
+   }
   .topNav {
     color: $grey;
   }
   form{
-    margin-top: 15px;
+    margin-top: -7px;
+    margin-bottom: -6px;
   }
   #searchRepos {
     border: 1px solid $border;
@@ -164,6 +202,9 @@ img {
     border: 1px solid $border;
     margin-left: 25px;
   }
+  #type:hover{
+    -webkit-filter: brightness(96%);
+  }
   #type:after{
    content: "";
    display: block;
@@ -180,6 +221,9 @@ img {
     border-radius: 3px;
     border: 1px solid $border;
   }
+  #language:hover{
+    -webkit-filter: brightness(96%);
+  }
   #new {
     width: 72px;
     height:35px;
@@ -188,32 +232,31 @@ img {
     background: linear-gradient($greentopgradient, $greenbottomgradient);
     border: 1px solid $greenborder;
     border-radius: 3px;
-    margin-left: 4px;
+    margin-left: 13px;
     color: #FFF;
+  }
+  #new:hover{
+    -webkit-filter: brightness(94%);
   }
   #bookImage {
     position: absolute;
     color: #FFF;
     right: 65px;
-    bottom: 137px;
+    bottom: 522px;
+  }
+  .repoContainer{
+    font-family: inherit;
+    border: 1px solid red;
 
   }
-  #repositoryContainer{
-    font-family: inherit;
-    height: 85px;
-  }
-  #repositoryContainer h2{
+  .repoContainer h2{
     color: $repoblue;
     font-size: 17px;
   }
-  #repositoryContainer h4{
+  .repoContainer h4{
     color: $repogrey;
     font-size: 15px;
     font-weight: 400;
-    line-height:2em;
-  }
-  span {
-    margin-right: 30px;
   }
   .repohr{
     margin-bottom:10px;
@@ -227,17 +270,21 @@ img {
     font-size: 13px;
   }
   i, h6{
-    // text-align: right;
     color: $grey;
     font-size: 15px;
     text-decoration: none;
+    // display:inline-block;
   }
+  // #progLanguage{
+  //   // display:inline-block;
+  // }
   #circle{
-    height: 15px;
-    width: 15px;
+    height: 10px;
+    width: 10px;
     border: 1px solid black;
     border-radius: 50%;
-    position:inline-block;
+    // display:inline-block;
+    // margin-left:400px;
   }
   // i{
   //   float: right;
@@ -250,11 +297,6 @@ img {
   a:hover{
     color: $repoblue;
   }
-  // h6{
-  //   left: 650px;
-  //   top: 10px;
-  // }
-
 }
 
 

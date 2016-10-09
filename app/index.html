@@ -17,13 +17,15 @@
           <header class="fullWidthDiv">
             <img src="images/githubLogo.png" alt="cat">
             <form>
-              <input type="search" placeholder="Search GitHub">
+              <input type="search" placeholder=" Search GitHub">
             </form>
             <span>Pull requests</span>
             <span>Issues</span>
             <span>Gist</span>
 
-            <div class="imageContainer">
+            <div id="plus"><i class="fa fa-plus" aria-hidden="true"></i></div>
+
+            <div id=""class="imageContainer">
             <!-- TEMPLATE GOES HERE -->
             <div>
           </header>
@@ -43,7 +45,7 @@
 
               <script id="individualImage" type ="text/x-handlebars-template">
                 <div>
-                  <img id="avatar" src="{{avatar_url}}" alt="Avatar">
+                  <a href="https://github.com/settings/profile"><img id="avatar" src="{{avatar_url}}" alt="Avatar"></a>
                 </div>
               </script>
 
@@ -78,13 +80,12 @@
             </div>
 
             <script class="emailTemplate" type="text/x-handlebars-template">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
               <a href="#">{{email}}</a>
             </script>
 
             <div class="contact">
-              <i></i>
-              <!-- <a href="mcverticchio@gmail.com">mcverticchio@gmail.com</a> -->
-              <i></i>
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
               <span>Joined on Aug 4, 2016</span>
             </div>
 
@@ -92,14 +93,16 @@
 
             <h3>Organizations</h3>
 
-            <div id="orgContainer">
+            <div class="orgContainer">
                <!--TEMPLATE GOES HERE -->
             </div>
 
 
-              <script id="orgTemplate" type="text/x-handlebars-template">
-                <a href="{{events_url}}"><img src="{{avatar_url}}" alt=""></a>
-                <h2>Hey there</h2>
+              <script class="orgTemplate" type="text/x-handlebars-template">
+                <!-- <a href="{{url}}"> -->
+                <img src="{{avatar_url}}" alt="">
+              <!-- </a> -->
+                <!-- <h2>{{id}}</h2> -->
               </script>
 
 
@@ -109,45 +112,60 @@
 
         <div class="col-md-10">
           <div class="rightColumn">
+
+          <div class="col-md-12">
             <div class="topNav">
-              <span>Overview</span>
+              <span id="overView">Overview</span>
               <span>Repositories <span class="number">22</span></span>
               <span>Stars <span class="number">1</span></span>
               <span>Followers <span class="number">0</span></span>
               <span>Following <span class="number">1</span></span>
             </div>
-
             <hr>
+          </div>
 
+          <div class="col-md-12">
             <form>
               <input id="searchRepos" type="search" name="name" placeholder=" Search repositories...">
               <input id="type" type="button" name="name" value="Type: All">
               <input id="language" type="button" name="name" value="Language: All">
               <input id="new" type="button" name="name" value="  New"><i id="bookImage" class="fa fa-book" aria-hidden="true"></i>
             </form>
-
             <hr>
+          </div>
 
-            <div id="repositoryContainer">
+
+          <div id="repositoryContainer">
               <!--HANDLEBARS TEMPLATE GOES HERE -->
-            </div>
+          </div>
 
-            <script id="repoTemplate" type ="text/x-handlebars-template">
-              <div class="repoContainer">
-                <a href="{{html_url}}"><h2>{{name}}</h2></a>
-                <h4>{{description}}</h4>
-                <div id="circle"></div>
-                <h5 id="proglanguage">{{language}}</h5>
-                <span>
+          <script id="repoTemplate" type ="text/x-handlebars-template">
+              <div class="col-md-12">
+                <div class="repoContainer">
+
+              <!-- <div class="topOfRepoContainer"> -->
+                <div class="col-md-5">
+                  <a href="{{html_url}}"><h2>{{name}}</h2></a>
+                  <h4>{{description}}</h4>
+                </div>
+
+                <div class="col-md-4">
+                  <div id="circle"></div>
+                  <h5 id="progLanguage">{{language}}</h5>
+                </div>
+
+                <div class="col-md-3">
                   <a id="secondLink" href="">
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <h6>{{stargazers_count}}</h6>
                   </a>
-                </span>
+                </div>
+
                 <hr class="repohr">
               </div>
-            </script>
-          </div>
+            </div>
+          </script>
+        </div>
         </div>
         <hr>
       </div>
