@@ -5,13 +5,13 @@ var _ = require('underscore');
 var Handlebars = require('handlebars');
 var githubtoken = require('./gitapikey.js');
 
-if(githubtoken !== undefined){
-  $.ajaxSetup({
-    headers: {
-      'Authorization': 'token ' + githubtoken.token
-    }
-  });
-}
+// if(githubtoken !== undefined){
+//   $.ajaxSetup({
+//     headers: {
+//       'Authorization': 'token ' + githubtoken.token
+//     }
+//   });
+// }
 
 
 $.ajax('https://api.github.com/users/mcverticchio').then(function(data){
@@ -121,18 +121,3 @@ function sticky_relocate() {
         $('.topNavPhantom').hide();
       }
 }
-
-$(function(){
-  $(window).scroll(appear);
-  appear();
-});
-
-function appear(){
-  if(($('.nameContainer').offset().top + 233) <= $(window).scrollTop()){
-  $('.hiddenDiv').addClass('appear');
-}else{
-  $('.hiddenDiv').removeClass('appear');
-}
-}
-
-// $('.large-picture').css('background-image', 'url('+data.avatar_url+')');
