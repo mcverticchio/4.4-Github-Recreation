@@ -84,7 +84,6 @@ function displayOrgs(orgs){
 
 
 
-
 $.ajax('https://api.github.com/users/mcverticchio/repos?sort=pushed').then(run)
 function run(data){
   console.log(data);
@@ -104,13 +103,36 @@ function displayRepos(repos){
   })
 }
 
-// HOW TO CHANGE CIRCLE COLOR BASED ON LANGUAGE VALUE?
-// function changeCircleColor (circle){
-//   var circle =document.getElementById("circle");
-//   var language =document.getElementById("language");
-//   if (.language=== "CSS") {
-//   circle.style.backgroundColor = "$purplecircle";
-//   } else{
-//   circle.style.backgroundColor = "$yellowcircle"
-// }
-// }
+
+
+$(function(){
+  $(window).scroll(sticky_relocate);
+  sticky_relocate();
+});
+
+function sticky_relocate() {
+      var window_top = $(window).scrollTop();
+      var div_top = $('.content-anchor').offset().top;
+      if (window_top > div_top) {
+        $('.topNav').addClass('stick');
+        $('.topNavPhantom').show();
+      } else {
+        $('.topNav').removeClass('stick');
+        $('.topNavPhantom').hide();
+      }
+}
+
+$(function(){
+  $(window).scroll(appear);
+  appear();
+});
+
+function appear(){
+  if(($('.nameContainer').offset().top + 233) <= $(window).scrollTop()){
+  $('.hiddenDiv').addClass('appear');
+}else{
+  $('.hiddenDiv').removeClass('appear');
+}
+}
+
+// $('.large-picture').css('background-image', 'url('+data.avatar_url+')');

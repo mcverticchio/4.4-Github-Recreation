@@ -23,6 +23,7 @@ $yellowcircle: #F1E05A;
 $darkredcircle: #701516;
 $greencircle: #89E051;
 $bottomCat: #CCCCCC;
+$placeholder: #C8C8C8;
 
 
 *,
@@ -43,6 +44,7 @@ img {
   width: 1020px;
 }
 
+
 .fullWidthDiv {
   background-color:$backgroundgray;
   height: 50px;
@@ -50,12 +52,31 @@ img {
   padding-top: 10px;
   width: 1300px;
   margin-left: -140px;
-  // font-size: 13px;
-  // position: absolute;
-  // width: 100%;
-  // left: 0;
+    // .hiddenDiv{
+    //   height: 70px;
+    //   border-bottom: 1px solid #EEE;
+    //   background: white;
+    //   z-index: 5;
+    //   padding-top:15px;
+    //   // position: fixed;
+    // }
+    // img{
+    //   width: 20px;
+    //   height: 20px;
+    //   display:inline-block;
+    // }
+    // h4{
+    //   display:inline-block;
+    // }
+    // // .hiddenDiv h4{
+    // //   display:inline-block;
+    // // }
+    input::-webkit-input-placeholder {
+    color: $placeholder;
+    }
     img {
       width:27px;
+      height: 27px;
       margin-left: 138px;
     }
     form {
@@ -97,9 +118,10 @@ img {
     }
     #avatar {
       width: 20px;
+      height: 20px;
       position:absolute;
       left: 832px;
-      top: 13px;
+      top: 15px;
     }
     .imageContainer:after{
      content: "";
@@ -171,7 +193,7 @@ img {
 }
 
 .rightColumn {
-  margin-top: 40px;
+  margin-top: 20px;
   padding-left: 70px;
   width: 834px;
    span{
@@ -183,10 +205,34 @@ img {
   .topNav {
     color: $grey;
     // position: fixed;
+    // top: 80px;
+    padding: 25px 0px;
+    border-bottom: 1px solid $bottomgradient;
+    z-index: 5;
+    background: white;
+    width: 735px;
+  }
+  .topNavPhantom {
+    color: $grey;
+    // position: fixed;
+    // top: 80px;
+    padding: 25px 0px;
+    border-bottom: 1px solid $bottomgradient;
+    z-index: 5;
+    background: white;
+    width: 735px;
+  }
+  .topNav.stick{
+    position: fixed;
+    top:0;
+    width: 100%;
   }
   form{
     margin-top: 12px;
     margin-bottom: -12px;
+  }
+  input::-webkit-input-placeholder {
+  color: $placeholder;
   }
   #searchRepos {
     border: 1px solid $border;
